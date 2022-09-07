@@ -1,0 +1,40 @@
+<div class="agregar">
+    <h4 class="new-prod">Modificar novedad</h4>
+    <form class="login" action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
+        <input type="hidden" value="{{novedades.id}}" name="id">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="title" value="{{novedades.titulo}}" name="titulo" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="subtitulo" class="form-label">Subtítulo</label>
+            <textarea type="text" name="subtitulo" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">{{novedades.subtitulo}}</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="cuerpo" class="form-label">Cuerpo</label>
+            <textarea type="text" name="cuerpo" class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp">{{novedades.cuerpo}}</textarea>
+        </div>
+
+        
+        <div class="mb-3 row">
+            <label>Imágen: <input type="file" class="form-control" value="{{novedades.imagen}}" name="imagen" id="imagen"></label>
+        </div>
+
+        <div class="mb-3 row" >
+            <label><input type="checkbox" name="img_delete" id="img_delete" value="1">  Eliminar imágen actual?</label>
+            <input type="hidden" name="img_original" value="{{novedades.img_id}}">
+        </div>
+
+        <div class="col text-center" style="padding-top: 2%; padding-bottom: 2%;">
+            <button type="submit" class="btn btn-primary">Modificar</button>
+        </div>
+    </form>
+
+    {{#if error}}
+    <p>{{message}}</p>
+    {{/if}}
+</div>

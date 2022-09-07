@@ -1,0 +1,112 @@
+body{
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+header{
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  padding: 10px;
+  -webkit-box-shadow: 0px 2px 26px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 26px -12px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 26px -12px rgba(0,0,0,0.75);
+}
+.header{
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo img{
+  height: 70px;
+  margin: auto;
+}
+
+.main{
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer{
+  background-color: #ccc;
+  color:#333;
+  padding: 50px;
+  text-align: center;
+  height: 70px;
+  align-items: center; 
+  margin-top: auto;
+}
+
+.login{
+  padding-top: 200px;
+}
+
+.admin-cont{
+  display: flex;
+  justify-content: space-between;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.thead-dark{
+  color: white;
+  background-color: black;
+}
+
+.login div{
+  width: 50%;
+  margin: auto;
+}
+.agregar{
+  padding-top: 150px;
+}
+.new-prod{
+  text-align: center;
+}
+.login{
+  padding-top: 30px;
+}
+
+@media (max-width: 580px) {
+  footer{
+    background-color: #ccc;
+    clear: both;
+    color:#333;
+    padding: 50px;
+    margin-top: 70px;
+    text-align: center;
+    height: 30px;
+    align-items: center; 
+    position: absolute;
+    bottom: 0; 
+  }
+
+  .login{
+    padding-top: 150px;
+  }
+  .mb-3{
+    width: 80%;
+    margin-left: 40px;
+    
+  }
+  .btn-danger{
+    margin-left: 40px;
+    
+  }
+  .login div{
+    width: 80%;
+    margin: auto;
+  }
+}
